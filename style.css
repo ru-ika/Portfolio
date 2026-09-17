@@ -35,7 +35,7 @@ img{ max-width:100%; display:block; }
   padding:0 48px;
 }
 
-/* ---------- NAVBAR ---------- */
+/* Navigation */
 header{
   position:sticky;
   top:0;
@@ -118,26 +118,26 @@ nav.wrap{
   width:26px; height:2px; background:var(--text);
 }
 
-/* ---------- HERO ---------- */
-.hero{
+/* Home section */
+.intro{
   padding:110px 0 90px;
 }
 
-.hero .wrap{
+.intro .wrap{
   display:grid;
   grid-template-columns:1.15fr 0.85fr;
   gap:60px;
   align-items:center;
 }
 
-.hero h1{
+.intro h1{
   font-size:3.1rem;
   font-weight:800;
   line-height:1.1;
   margin-bottom:14px;
 }
 
-.hero h1 span{ color:var(--mint); }
+.intro h1 span{ color:var(--mint); }
 
 .role{
   font-size:1.3rem;
@@ -187,8 +187,8 @@ nav.wrap{
   transform:translateY(-2px);
 }
 
-/* ---------- HERO PHOTO ---------- */
-.hero-photo{
+/* Profile photo */
+.profile-photo{
   aspect-ratio:1/1;
   border-radius:50%;
   background:linear-gradient(160deg,#0e1420,#0a0f18);
@@ -196,7 +196,7 @@ nav.wrap{
   overflow:hidden;
 }
 
-.hero-photo img{
+.profile-photo img{
   width:100%;
   height:100%;
   object-fit:cover;
@@ -222,7 +222,7 @@ nav.wrap{
   opacity:0.6;
 }
 
-/* ---------- SECTION HEADS ---------- */
+/* Section headings */
 section{ padding:70px 0; }
 
 .section-title{
@@ -248,7 +248,7 @@ section{ padding:70px 0; }
   justify-content:center;
 }
 
-/* ---------- CARD BASE ---------- */
+/* Common cards */
 .card{
   background:var(--bg-card);
   border:1px solid var(--border);
@@ -280,7 +280,7 @@ section{ padding:70px 0; }
 }
 .icon-circle i{ color:#000000; font-size:1.6rem; }
 
-/* ---------- EDUCATION ---------- */
+/* Education */
 .edu-grid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -311,7 +311,7 @@ section{ padding:70px 0; }
   gap:6px;
 }
 
-/* ---------- SKILLS ---------- */
+/* Skills */
 .skills-grid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -335,7 +335,7 @@ section{ padding:70px 0; }
   color:var(--text-dim);
 }
 
-/* ---------- PROJECTS ---------- */
+/* Projects */
 .project-grid{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -398,7 +398,7 @@ section{ padding:70px 0; }
   .project-card p{ text-align:left; }
 }
 
-/* ---------- CERTIFICATIONS ---------- */
+/* Certifications */
 .cert-grid{
   display:grid;
   grid-template-columns:repeat(4, 1fr);
@@ -434,7 +434,7 @@ section{ padding:70px 0; }
   border-radius:2px;
 }
 
-/* ---------- CONTACT ---------- */
+/* Contact */
 .contact-grid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -547,7 +547,7 @@ section{ padding:70px 0; }
 
 .message-popup i{ color:var(--mint); }
 
-/* ---------- CERTIFICATE VIEWER ---------- */
+/* Certificate viewer */
 .certificate-modal{
   position:fixed;
   inset:0;
@@ -607,7 +607,7 @@ section{ padding:70px 0; }
   text-align:center;
 }
 
-/* ---------- FOOTER ---------- */
+/* Footer */
 footer{
   text-align:center;
   padding:32px 0;
@@ -639,13 +639,13 @@ footer .socials a:hover{
   color:var(--mint);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* Mobile layout */
 @media (max-width:900px){
   .wrap{ padding:0 24px; }
-  .hero .wrap{ grid-template-columns:1fr; }
-  .hero-photo{ max-width:340px; margin:0 auto; order:-1; }
+  .intro .wrap{ grid-template-columns:1fr; }
+  .profile-photo{ max-width:340px; margin:0 auto; order:-1; }
   .edu-grid, .skills-grid, .project-grid, .cert-grid, .contact-grid{ grid-template-columns:repeat(2,1fr); }
-  .hero h1{ font-size:2.4rem; }
+  .intro h1{ font-size:2.4rem; }
 }
 
 @media (max-width:640px){
@@ -665,10 +665,10 @@ footer .socials a:hover{
   .nav-links a{ padding:16px 0; width:100%; text-align:center; }
   .menu-toggle{ display:flex; }
   .edu-grid, .skills-grid, .project-grid, .cert-grid, .contact-grid{ grid-template-columns:1fr; }
-  .hero{ padding:60px 0; }
-  .hero h1{ font-size:2rem; }
-  .hero h1,
-  .hero .role{ text-align:center; }
+  .intro{ padding:60px 0; }
+  .intro h1{ font-size:2rem; }
+  .intro h1,
+  .intro .role{ text-align:center; }
   .btn-row{ flex-direction:column; }
   .btn{ justify-content:center; }
   .cert-card{
