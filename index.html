@@ -209,8 +209,38 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>
+
+<section id="connect">
+  <div class="wrap">
+    <h2 class="section-title"><i class="fa-solid fa-paper-plane"></i> LET'S CONNECT</h2>
+    <form class="message-form" id="messageForm">
+      <h3>Send a Message</h3>
+      <div class="form-fields">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+      </div>
+      <label>
+        Message
+        <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+</section>
+
+<div class="message-popup" id="messagePopup" role="status" aria-live="polite">
+  <i class="fa-solid fa-circle-check"></i>
+  Message sent successfully!
+</div>
 
 <footer>
   <div class="socials">
@@ -221,14 +251,7 @@
   <p>&copy; 2026 Rupika Tamang</p>
 </footer>
 
-<script>
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
-  });
-</script>
+<script src="./script.js"></script>
 
 </body>
 </html>
