@@ -573,10 +573,11 @@ section{ padding:70px 0; }
 }
 
 .certificate-modal h2{
-  padding-right:30px;
+  padding:0 30px;
   margin-bottom:22px;
   color:var(--mint-soft);
   font-size:1.2rem;
+  text-align:center;
 }
 
 .certificate-modal img{
