@@ -412,11 +412,26 @@ section{ padding:70px 0; }
   min-height:112px;
 }
 
-.cert-card p{
+.cert-name{
   flex:1;
-  font-size:0.94rem;
+  padding:0;
+  border:0;
+  background:none;
   color:var(--text);
+  font:inherit;
+  font-size:0.94rem;
   line-height:1.5;
+  text-align:left;
+  cursor:pointer;
+}
+
+.cert-name:hover,
+.cert-name:focus-visible{ color:var(--mint); }
+
+.cert-name:focus-visible{
+  outline:2px solid var(--mint);
+  outline-offset:5px;
+  border-radius:2px;
 }
 
 /* ---------- CONTACT ---------- */
@@ -531,6 +546,65 @@ section{ padding:70px 0; }
 }
 
 .message-popup i{ color:var(--mint); }
+
+/* ---------- CERTIFICATE VIEWER ---------- */
+.certificate-modal{
+  position:fixed;
+  inset:0;
+  z-index:300;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(4,7,12,0.86);
+}
+
+.certificate-modal[hidden]{ display:none; }
+
+.certificate-modal-content{
+  position:relative;
+  width:min(900px, 100%);
+  max-height:calc(100vh - 48px);
+  overflow:auto;
+  padding:34px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:var(--bg-card);
+}
+
+.certificate-modal h2{
+  padding-right:30px;
+  margin-bottom:22px;
+  color:var(--mint-soft);
+  font-size:1.2rem;
+}
+
+.certificate-modal img{
+  width:100%;
+  max-height:calc(100vh - 180px);
+  object-fit:contain;
+  margin:0 auto;
+}
+
+.certificate-close{
+  position:absolute;
+  top:12px;
+  right:16px;
+  border:0;
+  background:none;
+  color:var(--text-dim);
+  font-size:2rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+.certificate-close:hover,
+.certificate-close:focus-visible{ color:var(--mint); }
+
+.certificate-error{
+  color:var(--text-dim);
+  text-align:center;
+}
 
 /* ---------- FOOTER ---------- */
 footer{
