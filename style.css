@@ -191,9 +191,11 @@ nav.wrap{
 .profile-photo{
   aspect-ratio:1/1;
   border-radius:50%;
+  border:2px solid var(--mint);
   background:linear-gradient(160deg,#0e1420,#0a0f18);
   position:relative;
   overflow:hidden;
+  box-shadow:0 0 0 6px var(--mint-dim), 0 12px 28px rgba(0,0,0,0.28);
 }
 
 .profile-photo img{
