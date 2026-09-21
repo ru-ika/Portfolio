@@ -30,7 +30,7 @@ function closeCertificate() {
   certificateImage.removeAttribute('src');
 }
 
-document.querySelectorAll('.cert-name').forEach(certName => {
+document.querySelectorAll('.cert-name, .exp-certificate-trigger').forEach(certName => {
   certName.addEventListener('click', () => {
     certificateTitle.textContent = certName.dataset.title;
     certificateImage.alt = certName.dataset.title;
@@ -38,6 +38,13 @@ document.querySelectorAll('.cert-name').forEach(certName => {
     certificateError.hidden = true;
     certificateModal.hidden = false;
     document.body.style.overflow = 'hidden';
+  });
+
+  certName.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      certName.click();
+    }
   });
 });
 
